@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    font-family: 'Lobster', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccb;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #f47c7c;
+    background-color: #fde2e2;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#celebration {
+    display: none;
+    font-size: 40px;
+    color: #f47c7c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    background-color: #ff7474;
+    position: absolute;
+    bottom: -100px; /* Start off-screen */
+    opacity: 0;
+    transform: rotate(45deg);
+    animation: floatHeart 5s ease-in forwards;
+}
+
+.heart:before, .heart:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: #ff7474;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.heart:after {
+    left: 50%;
+}
+
+/* Heart floating animation */
+@keyframes floatHeart {
+    0% {
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-1000px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+/* ... existing CSS ... */
+
+.hidden {
+    display: none;
+}
+
+#counter {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#counter p {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+#confirmNo {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #f47c7c;
+    background-color: #fde2e2;
+}
