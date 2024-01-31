@@ -22,6 +22,7 @@ document.getElementById('yesButton').addEventListener('click', function() {
     celebration.textContent = 'Yay! see you on the 14th';
     document.body.appendChild(celebration);
     celebration.style.display = 'block';
+    document.getElementById('corgiGifContainer').classList.remove('hidden');
 
     // Create and animate hearts
     for (let i = 0; i < 50; i++) {
@@ -32,5 +33,4 @@ document.getElementById('yesButton').addEventListener('click', function() {
         document.body.appendChild(heart);
     }
 });
-
 

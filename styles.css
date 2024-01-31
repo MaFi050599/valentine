@@ -107,3 +107,11 @@ button:hover {
     border: 2px solid #f47c7c;
     background-color: #fde2e2;
 }
+
+#corgiGifContainer {
+    text-align: center;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
